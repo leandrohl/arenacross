@@ -1,0 +1,146 @@
+.footerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #212121;
+}
+
+.footerContainer > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+
+    border-bottom: solid 1px #484848;
+    
+    width: 60%;
+}
+
+.footerContainer > div img{
+    width: 12rem;
+    cursor: pointer;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+
+    width: 90%;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.info > div {
+    flex:1;
+
+    color: white;
+
+    padding: 2rem;
+}
+
+.info > div h4{
+    font-weight: bold;
+    font-size: 1rem;
+
+
+    padding-bottom: 0.8rem;
+    border-bottom: solid 2px #D16615;
+}
+
+.info > div p {
+    margin-top: 1rem;
+    width: 70%;
+
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.info > div ul{
+    list-style: none;
+}
+
+.info > div ul li{
+    font-weight: 600;
+    font-size: 0.875rem;
+
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.info a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.info a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.info > div:last-child{
+    display: flex;
+    flex-direction: column;
+}
+
+.info > div input{
+    background: #444444;
+
+    border: 0;
+    border-radius: 5px;
+
+    margin-top: 1rem;
+    padding-left: 1rem;
+
+    height: 2rem;
+
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-family: Inter, sans-serif;
+
+    color: rgb(185, 185, 185);
+}
+
+
+.info > div button{
+    background: var(--orange);
+    color: var(--white);
+
+    border: none;
+    border-radius: 5px;
+
+    margin-top: 1.5rem;
+    height: 2.3rem;
+
+    font-weight: bold;
+
+}
+
+.footerContainer > div:last-child{
+    display: flex;
+    justify-content: space-between;
+
+    border-top: solid 1px #484848;
+    padding: 1.5rem 10%;
+    width: 100%;
+}
+
+.footerContainer > div:last-child p{
+    font-weight: 500;
+    font-size: 0.875rem;
+
+    width: 30%;
+
+    color: var(--white);
+}
+
+
+@media (max-width: 800px){
+    .info{
+        flex-direction: column;
+    }
+}
