@@ -1,0 +1,375 @@
+.containerOurSpace {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+}
+
+.containerOurSpace > h1{
+    color: var(--gray-dark);
+    font-weight: bold;
+
+    padding: 0 2rem;
+}
+
+.containerOurSpace > h1 span{
+    color: var(--orange);
+}
+
+.containerOurSpace > p{
+    color: var(--text);
+
+    font-weight: 500;
+    font-size: 1.1rem;
+    font-family: Inter, sans-serif;
+}
+
+.containerImages {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr) ;
+    justify-content: center;
+    justify-items: center;
+    gap: 2rem;
+    width: 90%;
+    margin-top: 1.3rem;
+
+}
+
+.item{
+    margin: 0;
+    position: relative;
+    transition:0.5s;
+}
+
+.item:hover{
+    cursor: pointer;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.item img:hover{
+    filter:brightness(0.7);
+}
+
+.item span{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    font-size: 0.875rem;
+    font-weight: bold;
+    font-family: Inter, sans-serif;
+
+    border-top-right-radius: 4px;
+    color: var(--white);
+    background: var(--gray-dark);
+    padding: 4px 12px;
+    
+}
+
+.containerBasicCare {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+
+.containerBasicCare > h1{
+    color: var(--gray-dark);
+    font-weight: bold;
+
+    padding: 0 2rem;
+}
+
+.containerBasicCare > h1 span{
+    color: var(--orange);
+}
+
+.containerBasicCare > p{
+    color: var(--text);
+
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: Inter, sans-serif;
+
+    margin-top: 0.3rem;
+}
+
+.infoBasicCare {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    margin-top: 1.3rem; 
+}
+
+.infoBasicCare > div{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+
+    background: #E9883E;
+
+    height: 25rem;
+    width: 25%;
+    padding: 1rem 0.5rem;
+}
+
+.infoBasicCare > div:first-child{
+    margin-right: 2rem;
+}
+
+.infoBasicCare > div:last-child{
+    margin-left: 2rem;
+}
+
+.infoBasicCare > div h3{
+    font-weight: 600;
+    margin: 0;
+}
+
+.infoBasicCare strong{
+    color: #fff;
+    font-size: 1.5rem;
+
+    margin-bottom: 3rem;
+}
+
+.infoBasicCare > div p{
+   font-weight: bold;
+   font-size: 1rem;
+}
+
+
+.infoBasicCare > div span {
+    color: #fff;
+}
+
+.icon{
+    width: 40%;
+    margin-bottom: 3rem;
+}
+
+.plansContainer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 100%;
+    background: var(--gray-dark);
+
+    padding: 6rem 0;
+}
+
+.plansContainer > h1{
+    color: var(--white);
+
+    font-weight: bold;
+}
+
+.plansContainer > h1 span{
+    color: var(--orange);
+}
+
+.plansContainer > p{
+    color: rgb(223, 223, 223);
+
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: Inter, sans-serif;
+
+    margin-top: 0.5rem;
+}
+
+.plans {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    margin-top: 3rem;
+
+}
+
+.plans > div {
+    width: 30%;
+
+    background: var(--white);
+}
+
+.plans > div:last-child{
+    margin-left: 5%;
+}
+
+.titulo {
+    height: 10rem;
+
+    background: #0f0f0f;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 0.5rem;
+
+    background: #0f0f0f;
+}
+
+.titulo span{
+    margin-top: 1rem;
+
+    color: var(--white);
+
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.titulo strong{
+    color: var(--orange);
+
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.preco {
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    margin: -30px auto 20px;
+    padding: 1rem;
+
+    background: var(--orange);
+}
+
+.preco span{
+    color: var(--white);
+
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.preco strong{
+    color: var(--gray-dark);
+
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.conteudo {
+    height: 35rem;
+}
+
+.aproveite{
+    display: flex;
+    justify-content: center;
+    
+    margin-bottom: 2.2rem;
+}
+
+.aproveite button{
+    width: 70%;
+    height: 3rem;
+
+    border: 0;
+    border-radius: 5px;
+    background: #e93737;
+    color: var(--white);
+
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 980px){
+    .plans > div {
+        width: 40%;
+    }
+}
+
+@media (max-width: 760px){
+    .plans{
+        flex-direction: column;
+    }
+
+
+    .plans > div {
+        width: 60%;
+    }
+
+    .plans > div:last-child{
+        margin-left: 0%;
+        margin-top: 4rem;
+    }
+
+    .containerImages{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        margin-top: 1.5rem;
+    }
+
+    .item span{
+        font-size: 1rem;
+    }
+
+    .infoBasicCare{
+        flex-direction: column;
+    }
+
+
+    .infoBasicCare > div {
+        width: 50%;
+        height: 25rem;
+        
+    }
+
+    .infoBasicCare > div p{
+        font-size: 1.2rem;
+    }
+
+    .infoBasicCare > div{
+        margin-bottom: 2rem;
+    }
+
+    .infoBasicCare > div:first-child{
+        margin-right: 0;
+    }
+    
+    .infoBasicCare > div:last-child{
+        margin-left: 0;
+    }
+}
+
+iframe {
+    width:100%;
+    height:300px;
+    border: 0;
+}
+
+@media (max-width: 600px){
+
+    .plans > div {
+        width: 80%;
+    }
+}
+

@@ -15,9 +15,9 @@ export default function LoginModal(){
         name: '',
         email: '',
         cellphone: '',
+        date: '',
     })
 
-    const [date, setDate] = useState('')
     const [hour, setHour] = useState('07:00:00')
 
     function handleInputChange(event: ChangeEvent<HTMLInputElement>){
@@ -26,18 +26,12 @@ export default function LoginModal(){
 		setFormData({ ...formData, [name]: value});
 	}
 
-    function handleDataChange(event: ChangeEvent<HTMLInputElement>) {
-        const date = event.target.value
-        
-        setDate(date)
-    }
-
 	function handleSubmit(event: FormEvent){
 		event.preventDefault();
 
 		const {name, email, cellphone} = formData;
 
-        const scheduled_hour = date + ' ' + hour
+        const scheduled_hour = formData.date + ' ' + hour
 		
 		const data = {
             name, 
@@ -65,45 +59,41 @@ export default function LoginModal(){
                     </div>
                 :
                 <div className = "containerLogin">
-                    <div>
-                        <img src={LoginImg} alt="login-imagem"/>
-                    </div>
-                    <div>
-                        <form onSubmit={handleSubmit} className="formLogin">
-                            <h1>Agende seu <span>horário</span></h1>
-                            <div>
-                                <label>Nome: </label>
-                                <input type="text" name="name" required onChange={handleInputChange}></input>
-                            </div>
-                            <div>
-                                <label>Email: </label>
-                                <input type="email" name="email" required onChange={handleInputChange}></input>
-                            </div>
-                            <div>
-                                <label>Telefone: </label>
-                                <input type="tel" name="cellphone" required onChange={handleInputChange}></input>
-                            </div>
-                            <div>
-                                <label>Data: </label>
-                                <input type="date" name="date" required onChange={handleDataChange}></input>
-                            </div>
-                            <div>
-                                <label>Horário: </label>
-                                <select  name="hour" required>
-                                    <option value="07:00:00">07:00</option>
-                                    <option value="08:00:00">08:00</option>
-                                    <option value="11:30:00">11:30</option>
-                                    <option value="16:30:00">16:30</option>
-                                    <option value="17:30:00">17:30</option>
-                                    <option value="18:30:00">18:30</option>
-                                    <option value="19:30:00">19:30</option>
-                                </select>
-                            </div>
-                            <button type="submit">
-                                Agendar
-                            </button>
-                        </form>
-                    </div>
+                    <img src={LoginImg} alt="login-imagem"/>
+                    <form onSubmit={handleSubmit} className="formLogin">
+                        <h1>Agende seu <span>horário</span></h1>
+                        <div>
+                            <label>Nome: </label>
+                            <input type="text" name="name" required onChange={handleInputChange}></input>
+                        </div>
+                        <div>
+                            <label>Email: </label>
+                            <input type="email" name="email" required onChange={handleInputChange}></input>
+                        </div>
+                        <div>
+                            <label>Telefone: </label>
+                            <input type="tel" name="cellphone" required onChange={handleInputChange}></input>
+                        </div>
+                        <div>
+                            <label>Data: </label>
+                            <input type="text" name="date" required onChange={handleInputChange}></input>
+                        </div>
+                        <div>
+                            <label>Horário: </label>
+                            <select  name="hour" required>
+                                <option value="07:00:00">07:00</option>
+                                <option value="08:00:00">08:00</option>
+                                <option value="11:30:00">11:30</option>
+                                <option value="16:30:00">16:30</option>
+                                <option value="17:30:00">17:30</option>
+                                <option value="18:30:00">18:30</option>
+                                <option value="19:30:00">19:30</option>
+                            </select>
+                        </div>
+                        <button type="submit">
+                            Agendar
+                        </button>
+                    </form>
                     <button 
                     type="button"
                     onClick={() => closeLoginModal()}
@@ -111,7 +101,6 @@ export default function LoginModal(){
                          <MdClose
                             color= 'var(--gray-dark)'
                             size = {25}
-                            className="hamburguerClose"
                         />
                     </button>
                 </div>

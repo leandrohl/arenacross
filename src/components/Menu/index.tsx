@@ -18,7 +18,7 @@ export default function Menu(){
     const [active, setActive] = useState(false)
 
     function menuActive(){
-        if (document.body.clientWidth <= 900)
+        if (document.body.clientWidth <= 980)
             setActive(!active)
     }
     
@@ -76,20 +76,20 @@ export default function Menu(){
                     className="hamburguer"
                     onClick={menuActive}
                 >
-                        {
-                            active ? 
-                            <MdClose
-                            color= 'var(--white)'
-                            size = {30}
-                            className="hamburguerClose"
-                            />
-                            :
-                            <MdMenu
-                            color= 'var(--white)'
-                            size = {30}
-                            />
-                        }
-                    </label>
+                    {
+                        active ? 
+                        <MdClose
+                        color= 'var(--white)'
+                        size = {30}
+                        className="hamburguerClose"
+                        />
+                        :
+                        <MdMenu
+                        color= 'var(--white)'
+                        size = {30}
+                        />
+                    }
+                </label>
             </nav>
         </div>
     )

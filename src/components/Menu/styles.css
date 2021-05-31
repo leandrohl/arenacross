@@ -42,11 +42,13 @@
     background: var(--black);
 
     padding: 0.1rem 4rem;
+
+    height: 7rem;
 }
 
 .menuImg{
     height: 7rem;
-}
+} 
 
 .menu > img:hover{
     cursor:pointer;
@@ -117,20 +119,20 @@
 }
 
 .hamburguer{
+
+    height: 100%;
     display: none;
 
     cursor: pointer;
 }
 
 
-@media (max-width: 900px){
+@media (max-width: 980px){
 
     .hamburguer{
-        display: block;
+        display: flex;
+        align-items: center;
         z-index: 100;
-
-        margin-top: 1.5rem;
-        
     }
 
     .hamburguerClose{
