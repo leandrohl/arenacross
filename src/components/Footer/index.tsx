@@ -12,7 +12,7 @@ export default function Footer(){
                     <img src={logo} alt="logo"/>
                 </Link>
             </div>
-            <div className="info">
+            <div className="infoFooter">
                 <div>
                     <h4>INFORMAÇÕES</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing  and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.</p>
@@ -34,12 +34,6 @@ export default function Footer(){
                         <li><a href="https://web.whatsapp.com/send?phone=5518998030116" target="_blank">Whatsapp</a></li>
                         <li><a href="">Email</a></li>
                     </ul>
-                </div>
-                <div>
-                    <h4>RECEBA NOSSAS NOTÍCIAS</h4>
-                    <input type="text" name="nome" placeholder="Seu nome"></input>
-                    <input type="text" name="email" placeholder="E-mail"></input>
-                    <button type="button">Assinar</button>
                 </div>
             </div>
             <div>

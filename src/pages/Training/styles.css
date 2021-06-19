@@ -1,0 +1,177 @@
+.trainingContainer {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.trainingContainer > header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+
+    position: relative;
+    background: #0f0f0f;
+}
+
+.trainingContainer > header img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.3)
+}
+
+.tituloTraining {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloTraining h1{
+    color: var(--white);
+
+    font-weight: bold;
+    font-size: 2rem;
+
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.tituloTraining > h1 span{
+    color: var(--orange);
+}
+
+.tituloTraining > span {
+    border: solid 2px var(--orange);
+    border-radius: 20px;
+
+    color: var(--white);
+
+    font-family: Inter, sans-serif ;
+    font-size: 1rem;
+    font-weight: 600;
+
+    padding: 0.2rem 3rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem 0 0 3rem;
+
+    width: 95%;
+}
+
+.info > h2{
+    color: var(--gray-dark);
+
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
+
+.info > h2 span{
+    color: var(--orange);
+}
+
+.info p{
+    font-family: Inter, sans-serif;
+    text-align: justify;
+
+    padding-left: 0.875rem;
+    border-left: solid 3px var(--orange);
+
+    font-weight: 600;
+}
+
+.trainingDay {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0 0 3rem;
+}
+
+.trainingDay > div:first-child{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.day span{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.day span:first-child{
+    border-bottom: solid 4px var(--orange);
+}
+
+.trainingDay > div:last-child{
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    margin-left: 3rem;
+}
+
+
+.infoDay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+    margin-top: 1rem;
+}
+
+.infoDay > h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    margin: 0;
+}
+
+.infoDay > span {
+    font-family: Inter, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    opacity: 0.9;
+
+}
+
+.separate{
+    display: flex;
+}
+
+.separate div{
+    width: 90%;
+    border-bottom: solid 2px var(--gray-dark);
+}
+
+.training {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.training strong{
+    color: var(--orange);
+}
+
+.training > div ul{
+    list-style: none;
+    margin-top: 0.875rem;
+}
+
+.training > div li {
+    font-weight: 600;
+    font-family: Inter, sans-serif;
+}
