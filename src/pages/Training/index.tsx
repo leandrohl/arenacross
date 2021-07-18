@@ -23,7 +23,6 @@ export default function Training(){
     const dias_da_semana = ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira' ]
 
 
-
     useEffect(() => {
         const response = TrainingService();
         response
@@ -42,8 +41,10 @@ export default function Training(){
     }
 
     useEffect(() => {
-        if(allPosts) setShowPost(allPosts[postPosicao])
-    }, [postPosicao])
+        if(allPosts) {
+            setShowPost(allPosts[postPosicao])
+        }
+    }, [postPosicao, allPosts])
 
     const postProximo = () => {
         if (postPosicao > 0){
@@ -86,11 +87,6 @@ export default function Training(){
 
         return <> {primeiroDia} à {ultimoDia} </> 
     }
-
-    useEffect(() => {
-        console.log('posicao: ', postPosicao)
-        console.log(showPost)
-    }, [showPost, postPosicao])
 
     const renderTraining = () => (
         <div className="trainingContainer">
