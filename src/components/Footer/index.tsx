@@ -21,18 +21,19 @@ const Footer: React.FC = () => {
                 <div>
                     <h4>  ARENA CROSS </h4>
                     <ul>
-                        <li><a href="#ourspace">Nosso espaço</a></li>
-                        <li><a href="#basiccare">Cuidados básicos</a></li>
-                        <li><a href="#plans">Planos</a></li>
+                        <li><a href="/#ourspace">Nosso espaço</a></li>
+                        <li><a href="/#basiccare">Cuidados básicos</a></li>
+                        <li><a href="/#plans">Planos</a></li>
+                        <li><Link to="training">Treinos</Link></li>
                     </ul>
                 </div>
                 <div>
                     <h4>CONTATO</h4>
                     <ul>
-                        <li><a href="https://www.instagram.com/arenacrosspv" >Instagram</a></li>
-                        <li><a href="https://www.facebook.com/arenacrosspv" >Facebook</a></li>
-                        <li><a href="https://web.whatsapp.com/send?phone=5518998030116" >Whatsapp</a></li>
-                        <li><a href="https://www.instagram.com/arenacrosspv">Email</a></li>
+                        <li><a href="https://www.instagram.com/arenacrosspv" rel="noreferrer" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/arenacrosspv" rel="noreferrer" target="_blank" >Facebook</a></li>
+                        <li><a href="https://web.whatsapp.com/send?phone=5518998030116" rel="noreferrer" target="_blank">Whatsapp</a></li>
+                        <li><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTHWDGRCqhfCkHWCDlKlmrtPWbsMJWFMPhxhFBgchvRSgXNbzThbKDlNWfFnlLPTRCgNmL" rel="noreferrer" target="_blank">Email</a></li>
                     </ul>
                 </div>
             </div>
