@@ -50,16 +50,16 @@ export default function Menu(){
                             <Link to="/">Inicio</Link>
                         </li>
                         <li>
-                            <Link to="/admin">Nosso espaço</Link>
+                            <a href="/#ourspace">Nosso espaço</a>
                         </li>
                         <li>
-                            <a href="#plans">Planos</a>
+                            <a href="/#plans">Planos</a>
                         </li>
                         <li>
                             <Link to="/training">Treinos</Link>
                         </li>
                         <li>
-                            <Link to="#contact">Contato</Link>
+                            <a href="/#contact">Contato</a>
                         </li>
                     </ul>
                     <button 

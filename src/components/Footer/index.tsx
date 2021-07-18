@@ -7,8 +7,8 @@ import {Link} from 'react-router-dom'
 
 const Footer: React.FC = () => {
     return(
-        <div className="footerContainer">
-            <div id="contact">
+        <div className="footerContainer" id="contact">
+            <div >
                 <Link to="/">
                     <img src={logo} alt="logo"/>
                 </Link>
@@ -24,7 +24,6 @@ const Footer: React.FC = () => {
                         <li><a href="#ourspace">Nosso espaço</a></li>
                         <li><a href="#basiccare">Cuidados básicos</a></li>
                         <li><a href="#plans">Planos</a></li>
-                        <li><a href="#trainingtime">Horários de treinos</a></li>
                     </ul>
                 </div>
                 <div>

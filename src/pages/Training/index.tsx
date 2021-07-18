@@ -2,7 +2,7 @@ import { useState, useEffect} from 'react';
 
 // import ImageTraining from '../../assets/crossfit.png' 
 
-import {TrainingService} from '../../services/Training/TrainingService'
+import {TrainingService} from '../../services/TrainingService'
 
 import {MdNavigateNext, MdNavigateBefore} from 'react-icons/md'
 
@@ -16,12 +16,13 @@ import './styles.css'
 export default function Training(){
 
     const [allPosts, setAllPosts] = useState<Trainings[]>()
+    
+    const [postPosicao, setPostPosicao] = useState<number>(0);
     const [showPost, setShowPost] = useState<Trainings>()
 
     const dias_da_semana = ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira' ]
 
 
-    const [postPosicao, setPostPosicao] = useState<number>(0);
 
     useEffect(() => {
         const response = TrainingService();
@@ -35,17 +36,18 @@ export default function Training(){
     }, []);
 
     const postAnterior = () => {
-        const limit = allPosts?.length?allPosts.length:0
-        if (postPosicao < limit) {
+        if (allPosts && postPosicao < allPosts.length) {
             setPostPosicao(postPosicao + 1)
-            setShowPost(allPosts && allPosts[postPosicao])
         }
     }
+
+    useEffect(() => {
+        if(allPosts) setShowPost(allPosts[postPosicao])
+    }, [postPosicao])
 
     const postProximo = () => {
         if (postPosicao > 0){
             setPostPosicao(postPosicao - 1)
-            setShowPost(allPosts && allPosts[postPosicao])
         }
     }
 
@@ -86,19 +88,25 @@ export default function Training(){
     }
 
     useEffect(() => {
-        console.log(showPost)
         console.log('posicao: ', postPosicao)
+        console.log(showPost)
     }, [showPost, postPosicao])
 
-    return(
+    const renderTraining = () => (
         <div className="trainingContainer">
             <header>
-                <div className="seta" onClick={postAnterior}>
-                    <MdNavigateBefore
+                <div className="seta">
+                    {
+                        allPosts && postPosicao !== allPosts.length-1
+                        &&
+                        <MdNavigateBefore
                         color= 'var(--orange)'
                         size = {35}
                         onClick={postAnterior}
-                    />
+                        cursor="pointer"
+                        />
+                    }
+                    
                 </div>
                 {/* <img src={ImageTraining} alt="titulo-image"/> */}
                 <div className="tituloTraining">
@@ -107,12 +115,17 @@ export default function Training(){
                         {renderData()}
                     </span>
                 </div>
-                <div className="seta" onClick={postProximo}>
-                    <MdNavigateNext
+                <div className="seta">
+                    {
+                        postPosicao !== 0 
+                        &&
+                        <MdNavigateNext
                         color= 'var(--orange)'
                         size = {35}
                         onClick={postProximo}
+                        cursor="pointer"
                     />
+                    }
                 </div>
             </header>
             <main>
@@ -180,5 +193,7 @@ export default function Training(){
                 }
             </main>
         </div>
-    )
-        }
+    ) 
+
+    return allPosts ? renderTraining() : <></>
+    }
