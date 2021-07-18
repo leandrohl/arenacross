@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+
 import { Carousel } from 'react-bootstrap'
 import carrossel from '../../assets/crossfit.png'
 
@@ -14,7 +16,6 @@ import garrafadeagua from '../..//assets/icons/garrafa-de-agua.svg'
 
 import './styles.css'
 
-import { useContext } from 'react'
 import { LoginContext } from '../../contexts/LoginContext'
 
 
@@ -152,10 +153,7 @@ export default function Home(){
                     </div>
                 </div>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3702.458191034369!2d-51.84407059431954!3d-21.87842507332725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949164c8f3f4c3a1%3A0xbab450d18e638146!2sR.%20Jos%C3%A9%20Bonif%C3%A1cio%2C%20342%20-%20Vila%20Ribeiro%2C%20Pres.%20Venceslau%20-%20SP%2C%2019400-000!5e0!3m2!1spt-BR!2sbr!4v1618774068778!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
-            
-            
+            <iframe title="localizacao_arenacross" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3702.458191034369!2d-51.84407059431954!3d-21.87842507332725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949164c8f3f4c3a1%3A0xbab450d18e638146!2sR.%20Jos%C3%A9%20Bonif%C3%A1cio%2C%20342%20-%20Vila%20Ribeiro%2C%20Pres.%20Venceslau%20-%20SP%2C%2019400-000!5e0!3m2!1spt-BR!2sbr!4v1618774068778!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
         </>
-        
     )
 }

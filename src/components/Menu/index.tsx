@@ -25,14 +25,14 @@ export default function Menu(){
     return(
         <div className="menuContainer">
             <div>
-                <a href="https://goo.gl/maps/fU95XS1AiU4FizWQ9" target="_blank">
+                <a href="https://goo.gl/maps/fU95XS1AiU4FizWQ9"  rel="noreferrer" target="_blank">
                     <FiMapPin
                             color= 'var(--white)'
                             size = {18}
                     />
                     <span>Rua José Bonifácio 342, Presidente Venceslau, SP</span>
                 </a>
-                <a href="https://web.whatsapp.com/send?phone=5518998030116" target="_blank">
+                <a href="https://web.whatsapp.com/send?phone=5518998030116"  rel="noreferrer" target="_blank">
                     <FaWhatsapp
                     color= 'var(--white)'
                     size = {18}

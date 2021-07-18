@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useContext, useEffect, useState } from 'react'
+import { ChangeEvent, FormEvent, useContext,  useState } from 'react'
 
 import {LoginContext} from '../../contexts/LoginContext'
 
@@ -8,11 +8,9 @@ import LoginImg from '../../assets/login-imagem.png'
 import { BsCheckCircle } from 'react-icons/bs';
 import {MdClose} from 'react-icons/md';
 
-import DatePicker from 'react-datepicker';
 
 export default function LoginModal(){
     const {loginSuccessed, closeLoginModal, isLoginSuccessed} = useContext(LoginContext)
-    const [startDate, setStartDate] = useState(new Date())
 
     const [formData, setFormData] = useState({
         name: '',
@@ -20,7 +18,6 @@ export default function LoginModal(){
         cellphone: '',
     })
 
-    const [hour, setHour] = useState('07:00:00')
 
     const renderInputDate = () => {
         return <></>
@@ -39,7 +36,6 @@ export default function LoginModal(){
 	const handleSubmit = (event: FormEvent) => {
 		event.preventDefault();
 
-		const {name, email, cellphone} = formData;
 
         // const scheduled_hour = formData.date + ' ' + hour
 		

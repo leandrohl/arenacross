@@ -1,10 +1,11 @@
+import React from 'react'
 
 import './styles.css'
 import logo from '../../assets/logo.png'
 
 import {Link} from 'react-router-dom'
 
-export default function Footer(){
+const Footer: React.FC = () => {
     return(
         <div className="footerContainer">
             <div id="contact">
@@ -29,10 +30,10 @@ export default function Footer(){
                 <div>
                     <h4>CONTATO</h4>
                     <ul>
-                        <li><a href="https://www.instagram.com/arenacrosspv" target="_blank">Instagram</a></li>
-                        <li><a href="https://www.facebook.com/arenacrosspv" target="_blank">Facebook</a></li>
-                        <li><a href="https://web.whatsapp.com/send?phone=5518998030116" target="_blank">Whatsapp</a></li>
-                        <li><a href="">Email</a></li>
+                        <li><a href="https://www.instagram.com/arenacrosspv" >Instagram</a></li>
+                        <li><a href="https://www.facebook.com/arenacrosspv" >Facebook</a></li>
+                        <li><a href="https://web.whatsapp.com/send?phone=5518998030116" >Whatsapp</a></li>
+                        <li><a href="https://www.instagram.com/arenacrosspv">Email</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,3 +44,5 @@ export default function Footer(){
         </div>
     )
 }
+
+export default Footer;

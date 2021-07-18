@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect} from 'react';
 
 // import ImageTraining from '../../assets/crossfit.png' 
 
@@ -8,24 +8,18 @@ import {MdNavigateNext, MdNavigateBefore} from 'react-icons/md'
 
 
 import {
-    DayExercises,
-    TrainingsProps,
     Trainings,
-    WorkoutDays
 } from './types'
 
 import './styles.css'
   
 export default function Training(){
 
-    const [latestPost, setLatestPost] = useState<Trainings>()
     const [allPosts, setAllPosts] = useState<Trainings[]>()
     const [showPost, setShowPost] = useState<Trainings>()
 
     const dias_da_semana = ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira' ]
 
-    const [firstDayWeek, setFirstDayWeek] = useState<string>('');
-    const [lastDayWeek, setLastDayWeek] = useState<string>('');
 
     const [postPosicao, setPostPosicao] = useState<number>(0);
 
@@ -62,10 +56,10 @@ export default function Training(){
         let lastMonth
         let monthLimit
 
-        if(firstMonth == 1 || firstMonth == 3 || firstMonth == 5 || firstMonth == 7 || firstMonth == 8 || firstMonth == 10 || firstMonth == 12) {
+        if(firstMonth === 1 || firstMonth === 3 || firstMonth === 5 || firstMonth === 7 || firstMonth === 8 || firstMonth === 10 || firstMonth === 12) {
             monthLimit = 31
         }
-        else if(firstMonth == 2) {
+        else if(firstMonth === 2) {
             monthLimit = 29
         }
         else {
@@ -73,11 +67,11 @@ export default function Training(){
         }
         
         lastDay = (firstDay + 4) % monthLimit
-        lastDay = lastDay == 0 ? monthLimit : lastDay
+        lastDay = lastDay === 0 ? monthLimit : lastDay
         lastDay = lastDay < 10 ? `0${lastDay}` : lastDay
 
         lastMonth = lastDay < firstDay ? (firstMonth+1)%12 : firstMonth
-        lastMonth = lastMonth == 0 ? 12 : lastMonth
+        lastMonth = lastMonth === 0 ? 12 : lastMonth
         lastMonth = lastMonth < 10 ? `0${lastMonth}` : lastMonth
 
         return `${lastDay}/${lastMonth}`
@@ -148,7 +142,7 @@ export default function Training(){
                                             <strong>WARMUP</strong>
                                             <ul>
                                             {
-                                                workout_day?.day_exercises?.filter(register => register.exercise_category == 'WARMUP').map((day_exercise, index) => {
+                                                workout_day?.day_exercises?.filter(register => register.exercise_category === 'WARMUP').map((day_exercise, index) => {
                                                     return <li key={index}>{day_exercise.exercise_repetitions} - {day_exercise.exercise_name}</li>
                                                 })
                                             }
@@ -160,7 +154,7 @@ export default function Training(){
                                             <strong>SKILL</strong>
                                             <ul>
                                                 {
-                                                    workout_day?.day_exercises?.filter(register => register.exercise_category == 'SKILL').map((day_exercise, index) => {
+                                                    workout_day?.day_exercises?.filter(register => register.exercise_category === 'SKILL').map((day_exercise, index) => {
                                                         return <li key={index}>{day_exercise.exercise_repetitions} - {day_exercise.exercise_name}</li>
                                                     })
                                                 }
@@ -172,7 +166,7 @@ export default function Training(){
                                             <strong>WOD</strong>
                                             <ul>
                                                 {
-                                                    workout_day?.day_exercises?.filter(register => register.exercise_category == 'WOD').map((day_exercise, index) => {
+                                                    workout_day?.day_exercises?.filter(register => register.exercise_category === 'WOD').map((day_exercise, index) => {
                                                         return <li key={index}>{day_exercise.exercise_repetitions} - {day_exercise.exercise_name}</li>
                                                     })
                                                 } 
