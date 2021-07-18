@@ -7,7 +7,7 @@ export const Routes = () => {
     return(
         <Switch>
 			<Route component={Home} path="/" exact/>  
-            <Route component={Training} path="/training" exact/>  
+            <Route component={Training} path="/training" exact/> 
         </Switch>
     )
 }

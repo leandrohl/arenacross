@@ -1,23 +1,21 @@
 export interface DayExercises{
-    exercise_id: string,
-    category: string, 
-    exercise_name: string,
-    repetitions: string
+    exercise_name?: string,
+    exercise_category?: string,
+    exercise_repetitions?: string
 }
 
 export interface WorkoutDays {
-    weekday_id: string,
-    coach: string, 
-    weekday: string, 
-    day_exercises: DayExercises[]
+    coach?: string, 
+    day_of_workout?: string, 
+    day_exercises?: DayExercises[]
 }
 
 export interface Trainings {
-    id: number,
-    title: string, 
-    description: string,
-    image: string,
-    workout_days: WorkoutDays[]
+    id?: number,
+    title?: string, 
+    description?: string,
+    week_start_date?: string,
+    workout_days?: WorkoutDays[]
 
 }
 

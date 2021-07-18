@@ -6,43 +6,53 @@ import './styles.css'
 import LoginImg from '../../assets/login-imagem.png'
 
 import { BsCheckCircle } from 'react-icons/bs';
-import {MdClose} from 'react-icons/md'
+import {MdClose} from 'react-icons/md';
+
+import DatePicker from 'react-datepicker';
 
 export default function LoginModal(){
     const {loginSuccessed, closeLoginModal, isLoginSuccessed} = useContext(LoginContext)
+    const [startDate, setStartDate] = useState(new Date())
 
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         cellphone: '',
-        date: '',
     })
 
     const [hour, setHour] = useState('07:00:00')
 
-    function handleInputChange(event: ChangeEvent<HTMLInputElement>){
+    const renderInputDate = () => {
+        return <></>
+            // <DatePicker
+            //     selected={startDate}
+            //     placeholderText="Escolha um dia"
+            // />
+    }
+
+    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
 		const {name, value} = event.target;
 		
 		setFormData({ ...formData, [name]: value});
 	}
 
-	function handleSubmit(event: FormEvent){
+	const handleSubmit = (event: FormEvent) => {
 		event.preventDefault();
 
 		const {name, email, cellphone} = formData;
 
-        const scheduled_hour = formData.date + ' ' + hour
+        // const scheduled_hour = formData.date + ' ' + hour
 		
-		const data = {
-            name, 
-            email, 
-            cellphone,
-            scheduled_hour,
-        }
+		// const data = {
+        //     name, 
+        //     email, 
+        //     cellphone,
+        //     scheduled_hour,
+        // }
 
 		// await api.post('points', data);
 
-		console.log(data)
+		// console.log(data)
         loginSuccessed()
 	}
 
@@ -76,7 +86,7 @@ export default function LoginModal(){
                         </div>
                         <div>
                             <label>Data: </label>
-                            <input type="text" name="date" required onChange={handleInputChange}></input>
+                            {renderInputDate()}
                         </div>
                         <div>
                             <label>Horário: </label>

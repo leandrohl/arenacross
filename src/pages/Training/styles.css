@@ -6,7 +6,7 @@
 
 .trainingContainer > header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 15rem;
 
@@ -14,19 +14,24 @@
     background: #0f0f0f;
 }
 
-.trainingContainer > header img{
+.seta {
+    padding: 2rem;
+    cursor: pointer;
+}
+
+/* .trainingContainer > header img{
     width: 100%;
     height: 100%;
     filter: brightness(0.3)
-}
+} */
 
 .tituloTraining {
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 
 .tituloTraining h1{
     color: var(--white);
@@ -42,6 +47,7 @@
     color: var(--orange);
 }
 
+
 .tituloTraining > span {
     border: solid 2px var(--orange);
     border-radius: 20px;
@@ -53,7 +59,7 @@
     font-weight: 600;
 
     padding: 0.2rem 3rem;
-}
+} 
 
 .info {
     display: flex;
@@ -145,17 +151,14 @@
     font-size: 0.875rem;
     font-weight: 600;
     opacity: 0.9;
-
 }
 
 .separate{
     display: flex;
-}
-
-.separate div{
     width: 90%;
     border-bottom: solid 2px var(--gray-dark);
 }
+
 
 .training {
     display: flex;
