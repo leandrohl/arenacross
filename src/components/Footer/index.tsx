@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
             <div className="infoFooter">
                 <div>
                     <h4>INFORMAÇÕES</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing  and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.</p>
+                    <p>Arena Cross é um centro de fitness especializado em oferecer treinamento baseado no método de treinamento funcional conhecido como CrossFit. O CrossFit é uma abordagem de condicionamento físico que combina elementos de levantamento de peso olímpico, ginástica, cardio e outros exercícios funcionais em um programa de treinamento dinâmico e intenso.</p>
                 </div>
                 <div>
                     <h4>  ARENA CROSS </h4>
